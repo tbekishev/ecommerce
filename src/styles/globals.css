@@ -303,6 +303,37 @@ a {
 .buttons .buy-now:hover{
   transform:scale(1.1,1.1)
 }
+.maylike-products-wrapper{
+  margin-top: 120px;
+}
+.maylike-products-wrapper h2{
+  text-align: center;
+  margin: 50px;
+  color: #324d67;
+  font-size: 28px;
+}
+.marquee{
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+}
+.maylike-products-container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.track{
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+  width: 180%;
+}
+.track:hover {
+  animation-play-state: paused;
+}
 
 @media screen and (max-width:800px) {
   .hero-banner-container{
@@ -362,4 +393,13 @@ a {
   .buttons .buy-now{
     width: 150px;
     }
+  .track {
+    animation: marquee 10s linear infinite;
+    width: 550%;
+    }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
