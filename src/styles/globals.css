@@ -212,6 +212,62 @@ a {
   display: flex;
   gap: 10px;
 }
+.product-detail-container{
+  display: flex;
+  gap: 40px;
+  margin: 40px;
+  margin-top: 60px;
+  color: #324d67;
+}
+.reviews{
+  color: #f02d34;
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.reviews p{
+  color: #324d67;
+  margin-top: 0px;
+}
+.product-detail-desc h4{
+  margin-top: 10px;
+}
+.product-detail-desc p{
+  margin-top: 10px;
+}
+.product-detail-desc .price{
+  font-weight: 700;
+  font-size: 26px;
+  margin-top: 30px;
+  color: #f02d34;
+}
+.product-detail-desc .quantity{
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  align-items: center;
+}
+.quantity-desc{
+  border: 1px solid gray;
+  padding: 6px;
+}
+.quantity-desc span{
+  font-size: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.quantity-desc .minus{
+  border-right: 1px solid gray;
+  font-size: 20px;
+}
+.quantity-desc .num{
+  border-right: 1px solid gray;
+  font-size: 20px;
+}
+.quantity-desc .plus{
+  color: rgb(49, 168, 49);
+}
 
 @media screen and (max-width:800px) {
   .hero-banner-container{
@@ -261,4 +317,8 @@ a {
     top: 6%;
     height: 56%;
   }
+  .product-detail-container{
+    flex-wrap: wrap;
+    margin: 20px;
+    }
 }
