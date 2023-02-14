@@ -48,6 +48,20 @@ const ProductDetails = ({ product, products }) => {
               </span>
             </p>
           </div>
+          <div className='buttons'>
+            <button 
+              type='button' 
+              className='add-to-cart'
+            >
+              Add to Cart
+              </button>
+            <button 
+              type='button' 
+              className='buy-now'
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
