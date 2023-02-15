@@ -11,7 +11,7 @@ const Cart = () => {
   console.log(context);
 
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   return (
     <div className='cart-wrapper' ref={cartRef}>
@@ -57,17 +57,17 @@ const Cart = () => {
                     <p className='quantity-desc'>
                       <span 
                         className='minus'
-                        onClick=''
+                        onClick={() => toggleCartItemQuantity(item._id, 'dec')}
                       >
                         <AiOutlineMinus/>
                       </span>
                       <span 
                         className='num'
-                      >0
+                      >{item.quantity}
                       </span>
                       <span 
                         className='plus'
-                        onClick=''
+                        onClick={() => toggleCartItemQuantity(item._id, 'inc')}
                       >
                         <AiOutlinePlus/>
                       </span>
@@ -76,6 +76,7 @@ const Cart = () => {
                   <button
                     type='button'
                     className='remove-item'
+                    onClick={() => onRemove(item)}
                   >
                     <TiDeleteOutline/>
                   </button>
