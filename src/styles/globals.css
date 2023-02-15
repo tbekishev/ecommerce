@@ -334,6 +334,25 @@ a {
 .track:hover {
   animation-play-state: paused;
 }
+.small-images-container{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.small-image{
+  border-radius: 8px;
+  background-color: #ebebeb;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.selected-image{
+  background-color:#f02d34;
+}
+.product-detail-container .product-detail-image{
+  width: 350px;
+  height: 350px;
+}
 
 @media screen and (max-width:800px) {
   .hero-banner-container{
