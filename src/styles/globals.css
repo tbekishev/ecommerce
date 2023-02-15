@@ -353,6 +353,9 @@ a {
   width: 350px;
   height: 350px;
 }
+.product-detail-image:hover{
+  background-color: #f02d34;
+}
 
 @media screen and (max-width:800px) {
   .hero-banner-container{
