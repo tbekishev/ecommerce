@@ -456,6 +456,24 @@ a {
   background: transparent;
   border: none;
 }
+.cart-bottom{
+  position: absolute;
+  bottom: 12px;
+  right: 5px;
+  width: 100%;
+  padding: 30px 65px;
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+}
+.total h3{
+  font-size: 22px;
+}
+.btn-container{
+  width: 400px;
+  margin: auto;
+}
 
 @media screen and (max-width:800px) {
   .hero-banner-container{
@@ -519,7 +537,6 @@ a {
     animation: marquee 10s linear infinite;
     width: 550%;
     }
-}
 .cart-container{
   width: 415px;
   padding: 4px;
@@ -554,6 +571,17 @@ a {
 .top{
   flex-wrap: wrap;
   gap: 10px;
+}
+.cart-bottom{
+  padding: 30px;
+}
+.total h3{
+  font-size: 20px;
+}
+.btn-container{
+  width: 300px;
+  margin: auto;
+}
 }
 
 @keyframes marquee {
