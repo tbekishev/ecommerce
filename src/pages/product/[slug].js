@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { client, urlFor } from "../../../lib/client";
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai';
 import Product from '../../components/Product';
@@ -8,12 +8,16 @@ const ProductDetails = ({ product, products }) => {
 
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart, setQty } = useStateContext();
 
-  const handleBuyNow =() => {
+  const handleBuyNow = () => {
     onAdd(product, qty);
     setShowCart(true);
   }
+
+  useEffect(() => {
+    setQty(1);
+  }, [product])
 
   return (
     <div>
